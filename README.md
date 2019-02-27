@@ -76,17 +76,25 @@
       
       音乐播放器: Jplayer
       
- - 环境
- 
+- 环境
+      
       开发工具: Pycharm
-      
+     
       开发语言: Python
-      
+     
       数据库: PyMySQL
-      
+     
       图片处理: Pillow
-      
+     
       文本编辑器: django-ckeditor
+
+     
+
+     
+
+     
+
+     
       
       
       
