@@ -93,13 +93,16 @@
       运行环境: 腾讯云Ubuntu 16.04
       
       代理服务: Nginx,Uwsgi
-      
-
-## 开发流程
 
 - 关于数据库
       
-      View处理Database中的数据并调用数据返回给template,或者template处理get/post/delete/put请求返回给View处理database中的数据返回View处理返回template
+      View处理Database中的数据并调用数据返回给template
+      template处理get/post/delete/put请求返回给View处理database中的数据返回View处理返回template
+      Mysql中的list由Django中的Model设计表结构会自动生成
+      加入数据可以在Django-admin管理账号手动添加数据或者输入Sql语句
+      template数据处理有些数据要返回给JS所以要在View进行Python的转Json会用到Restful Api
+      
+-
       
       
       
