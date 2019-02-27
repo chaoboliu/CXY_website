@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+    <title>程序优-最大程序题库网站</title>
+    <link rel="shortcut icon" href="/static/images/121.png"/>
+    <meta name="keywords" content="程序优-最大程序题库网站">
+    <link rel='stylesheet' href='/static/css/owl.carousel.min.css' type='text/css' media='all'/>
+    <link rel='stylesheet' href='/static/css/fontello.css' type='text/css' media='all'/>
+    <link rel='stylesheet' href='/static/css/nicetheme.css' type='text/css' media='all'/>
+    <link rel='stylesheet' href='/static/css/reset.css' type='text/css' media='all'/>
+    <link rel='stylesheet' href='/static/css/style.css' type='text/css' media='all'/>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/fonts.css" type="text/css"/>
+    <link href="/static/css/fon.css" rel="stylesheet">
+    <link href="/static/css/style1.css" rel="stylesheet">
+    <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <script type='text/javascript' src='/static/js/jquery.js'></script>
+    <style>
+        #header, #header .toggle-tougao, .two-s-footer .footer-box {
+            background-color: #000;
+        }
+
+        #header .primary-menu ul > li > a, #menu-mobile a, #header .js-toggle-message button, #header .js-toggle-search, #header .toggle-login, #header .toggle-tougao {
+            color: #bdbdbd;
+        }
+
+        .navbar-toggle .icon-bar {
+            background-color: #bdbdbd;
+        }
+
+        #header .primary-menu ul > li.current-menu-item > a, #header .primary-menu ul > li.menu-item-has-children:hover > a, #header .primary-menu ul > li.current-menu-ancestor > a, #header .primary-menu ul > li > a:hover {
+            color: #FFF;
+        }
+
+        #header .toggle-tougao:hover, #header .primary-menu ul > li .sub-menu li a:hover, #header .primary-menu ul > li .sub-menu li.menu-item-has-children:hover > a, #header .primary-menu ul > li .sub-menu li.current-menu-item > a {
+            color: #000;
+        }
+
+        #header .toggle-tougao, #header .toggle-tougao:hover {
+            border-color: #bdbdbd;
+        }
+
+        #header .toggle-tougao:hover {
+            background-color: #FFF;
+        }
+    </style>
+</head>
+<body class="home blog off-canvas-nav-left">
+{#    <div class="loader-mask">#}
+{#        <div class="loader">#}
+{#            <div></div>#}
+{#            <div></div>#}
+{#        </div>#}
+{#    </div>#}
+<div id="header" class="navbar-fixed-top">
+    <div class="container">
+        <div class="logo">
+            <img src="/static/images/20181127.png" width="220px" height="66px;">
+{#            <a href="#" title="程序优" style="background-image: url(/static/images/20181127.png);"> </a>#}
+        </div>
+        <div role="navigation" class="site-nav  primary-menu">
+            <ul id="menu-navigation">
+                <li ><a href="{% url '/:index' %}">首页</a></li>
+                <li><a href="#">热点资讯</a></li>
+                <li class="current-menu-ancestor"><a href="{% url '/:forum' %}">技术交流</a></li>
+                <li><a href="{% url '/:list' %}">热门文章</a></li>
+                <li><a>工作应聘</a></li>
+                <li><a href="{% url '/:music' %}" target="_blank">音乐地带</a></li>
+            </ul>
+        </div>
+
+
+        <!--右侧导航-->
+        <div class="right-nav pull-right">
+            <button class="js-toggle-search"><i class=" icon-search"></i></button>
+            <a href="{% url '/:problem' %}" target="_blank" class="toggle-tougao  hidden-xs">提问?</a> <a href="#"
+                                                                                                     class="toggle-login hidden-xs">登录</a>
+            <span class="line  hidden-xs"></span> <a href="#" class="toggle-login hidden-xs">注册</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% block dibu %}
+{% endblock dibu %}
+<div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer"><a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);"><i
+                    class="icon-wechat"></i></a></div>
+            <div class="nav-footer"><a href="{% url '/:index' %}">首页</a> <a href="#">热点资讯</a> <a href="#">技术交流</a> <a
+                    href="{% url '/:list' %}">热门文章</a> <a>工作应聘</a> <a href="{% url '/:music' %}" target="_blank">音乐地带</a><a href="{% url '/:dlu' %}">登录</a><a href="{% url '/:c_login' %}">注册</a><a href="{% url '/:write' %}" >投稿</a></div>
+            <div class="copyright-footer">
+                <p>Copyright © 2018 http://www.pgnice.com
+                    <a href="http://www.pgnice.com" target="_blank">pgnice</a></p>
+                <p><img src="/static/images/webLog.png" alt=""><a href="http://www.miitbeian.gov.cn" target="_blank">辽ICP备19000168号</a></p>
+            </div>
+            <div class="links-footer"><span>友情链接：</span>
+                <a href="#"  target="_blank">微信小程序-搞笑笑拍</a>
+                <a href="http://www.jikedaohang.com/" target="_blank">极客导航</a>
+                <a href="http://www.0418nb.com/" target="_blank">0418便民网</a>
+            </div>
+    </div>
+</div>
+<div class="search-form">
+    <form method="get" action="#" role="search">
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="s" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search"><i class="icon-search"></i></button>
+            </div>
+            <div class="search-commend">
+                <h4>大家都在搜</h4>
+                <ul>
+                    <li><a href="#">wordpress主题</a></li>
+                    <li><a href="#">个人博客模板</a></li>
+                    <li><a href="#">网页模板</a></li>
+                </ul>
+            </div>
+        </div>
+    </form>
+    <div class="close-search"><span class="close-top"></span> <span class="close-bottom"></span></div>
+</div>
+<div class="f-weixin-dropdown">
+    <div class="tooltip-weixin-inner">
+        <h3>关注我们的公众号</h3>
+        <div class="qcode"><img src="#" width="160px" height="160" alt="微信公众号"></div>
+    </div>
+    <div class="close-weixin"><span class="close-top"></span> <span class="close-bottom"></span></div>
+</div>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var suxingme_url = {"slidestyle": "index_slide_sytle_2", "wow": "1", "sideroll": "1", "duang": "1"};
+    /* ]]> */
+</script>
+<script type='text/javascript' src='/static/js/plugins.min.js'></script>
+<script type='text/javascript' src='/static/js/lmlblog.js'></script>
+<script type='text/javascript' src='/static/js/owl.carousel.min.js'></script>
+<script type='text/javascript' src='/static/js/wow.min.js'></script>
+
+
+<script src="/static/js/custom.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.mixitup.min.js"></script>
+
+</body>
+</html>
