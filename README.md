@@ -54,11 +54,11 @@
       
       技术交流轮播图功能,技术交流评论功能,热门文章页文章汇总功能
       
-      音乐地带音乐播放兼容Jplayer开源播放器功能,调用音乐api接口兼容功能
+      音乐地带音乐播放兼容Jplayer开源播放器功能,调用音乐api接口兼容功能,音乐播放Ajax异步请求功能
       
 - 待更新功能
       
-      用户登录注册,用户手机验证码,用户兼容文章,用户点赞功能,用户浏览量,用户流量统计
+      用户登录注册,用户手机验证码,用户兼容文章,用户点赞功能,用户浏览量,用户流量统计,https安全协议
       
       热点资讯页主题及功能制作将加入爬虫部署
       
@@ -80,13 +80,35 @@
       
       开发工具: Pycharm
      
-      开发语言: Python
+      开发语言: Python,html,css,jQuery,Bootstrap
+      
+      ORM: Django-MVT
      
       数据库: PyMySQL
      
       图片处理: Pillow
      
-      文本编辑器: django-ckeditor
+      内嵌文本编辑器: Django-ckeditor
+      
+      运行环境: 腾讯云Ubuntu 16.04
+      
+      代理服务: Nginx,Uwsgi
+      
+
+## 开发流程
+
+- 关于数据库
+      
+      View处理Database中的数据并调用数据返回给template,或者template处理get/post/delete/put请求返回给View处理database中的数据返回View处理返回template
+      
+      
+      
+      
+     
+         
+
+      
+      
 
      
 
