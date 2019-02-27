@@ -1,0 +1,182 @@
+﻿<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>音乐地带</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+  <link rel="shortcut icon" type="image/png" href="/static/images/121.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <!-- animate -->
+  <link rel="stylesheet" href="/static/assets/css/animate.css">
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="/static/assets/css/font-awesome.min.css">
+  <!-- owl carousel -->
+  <link rel="stylesheet" href="/static/assets/css/owl.carousel.min.css">
+  <!-- owl theme default -->
+  <link rel="stylesheet" href="/static/assets/css/owl.theme.default.min.css">
+  <!-- pe-icon-7-stroke -->
+  <link rel="stylesheet" href="/static/assets/css/pe-icon-7-stroke.min.css">
+  <!-- magnific popup -->
+  <link rel="stylesheet" href="/static/assets/css/magnific-popup.css"> 
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
+  <!-- swiper -->
+  <link rel="stylesheet" href="/static/assets/css/swiper.css"> 
+  <!-- audioplayer -->
+  <link rel="stylesheet" href="/static/assets/css/audioplayer.css">
+  <!-- menu -->
+  <link rel="stylesheet" href="/static/assets/css/menu.css">
+  <!-- main -->
+  <link rel="stylesheet" href="/static/assets/css/main.css">
+  <!-- responsive -->
+  <link rel="stylesheet" href="/static/assets/css/responsive.css">
+  <!-- default -->
+  <link rel="stylesheet" href="/static/assets/css/default.css">
+  <!-- color -->
+  <link rel="stylesheet" href="/static/assets/css/color.css">
+  
+</head>
+
+<body>
+
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+ 
+  
+
+ 
+
+  <div class="slider-area" id="home">  
+    <div class="slider-carousel owl-theme">
+      <div class="single-slides"></div>
+      <div class="single-slides2"></div>
+      <div class="single-slides3"></div>
+    </div> <!-- slider-carousel -->
+
+    <div class="js-info-album-player" id="js-info-album-player">
+      <div class="container-fluid pr-0">
+        <div class="row">
+          <div class="col-lg-10 offset-lg-2 offset-sm-0">
+            <div class="row">
+              <div class="col-lg-12 dark-overlay"> 
+                <div class="audio-player"> 
+                  <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+                  <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+                    <div class="jp-type-playlist"> 
+                        <div class="jp-gui jp-interface row"> 
+                            <div class="col-lg-1 col-sm-2 pr-0">
+                              <div class="jp-controls">
+                                  <button class="jp-previous" tabindex="0"><i class="fa fa-step-backward"></i></button>
+                                  <button class="jp-play" tabindex="0"><i class="fa fa-play"></i></button>
+                                  <button class="jp-next" tabindex="0"><i class="fa fa-step-forward"></i></button>
+                              </div>
+                            </div> 
+                            <div class="col-lg-2 col-sm-2 js-album-playing-text"> 
+                              <a href="javascript:void(0);" id="playlist-text">
+                                  <div class="jp-now-playing flex-item" >
+                                      <div class="jp-track-name"></div>
+                                      <div class="jp-artist-name"></div>
+                                  </div>
+                              </a>  
+                            </div> 
+                            <div class="col-lg-2 col-sm-3"> 
+                              <div class="jp-toggles"> 
+                                  <button id="playlist-toggle" class="jp-show-playlist" tabindex="0" title="Playlist"><i class="fa fa-music"></i>
+                                  </button> 
+                                  <button class="jp-shuffle" tabindex="0" title="Shuffle">
+                                      <i class="fa fa-random"></i>
+                                  </button> 
+                                  <button class="jp-repeat" tabindex="0" title="Repeat"><i class="fa fa-exchange"></i>
+                                  </button>
+                                  <!--<button class="jp-singlecycle" tabindex="0" title="singlecycle"><i class="fa fa-exchange"></i>-->
+                                  <!--</button>-->
+
+                              </div> 
+                            </div>  
+                            <div class="col-lg-4 col-sm-5 jp-volume-controls">
+                              <div class="">
+                                <button class="jp-mute" tabindex="0"><i class="fa fa-volume-up"></i></button> 
+                                <div class="jp-volume-bar">
+                                    <div class="jp-volume-bar-value">
+                                        <div class="bullet">
+                                        </div>
+                                    </div>
+                                </div> 
+                              </div>
+                            </div>
+                            
+                            <div class="col-lg-12"> 
+                              <div class="jp-progress-container"> 
+                                  <div class="jp-time-holder">
+                                      <span class="jp-current-time" role="timer" aria-label="time">&nbsp;</span>
+                                      <span class="jp-duration" role="timer" aria-label="duration">&nbsp;</span>
+                                  </div> 
+                                  <div class="jp-progress">
+                                      <div class="jp-seek-bar">
+                                          <div class="jp-play-bar">
+                                              <div class="bullet">
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div> 
+                              </div>  
+                            </div>  
+
+                        </div> 
+                        <div id="playlist-wrap" class="jp-playlist">
+                            <ul>
+                                <li>&nbsp;</li>
+                            </ul>
+                        </div> 
+                        <div class="jp-no-solution">
+                            <span>Update Required</span> To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                        </div>
+                    </div> 
+                  </div>
+                </div><!-- audio-player --> 
+              </div><!-- col-lg-9 --> 
+            </div><!-- row -->
+          </div><!-- col-lg-10 -->
+        </div><!-- row -->
+      </div><!-- container -->
+    </div><!-- js-info-album-player -->
+
+    <div id="js-play-song" class="primary-bg has-color"> 
+      <div class="js-song-list-thumbnail" >
+        <img src="/static/assets/images/playlists/playlists-sm8.jpg"  alt="playlists">
+      </div>
+
+
+      
+    </div>
+
+    
+  </div><!-- slider-area End-->  
+
+  
+   
+  <script src="/static/assets/js/vendor/jquery-3.3.1.min.js"></script> 
+  <script src="/static/assets/js/bootstrap.min.js"></script>
+  <script src="/static/assets/js/owl.carousel.min.js"></script>
+  <script src="/static/assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="/static/assets/js/swiper.min.js"></script>
+  <script src="/static/assets/js/plugins.js"></script>
+  <script src="/static/assets/js/menu.js"></script>
+  <script src="/static/assets/js/countdown.js"></script>  
+  <script src="/static/assets/js/jquery.nice-select.min.js"></script>  
+  <script src="/static/assets/js/jquery.jplayer.min.js"></script> 
+  <script src="/static/assets/js/jplayer.playlist.min.js"></script>
+  <script src="/static/assets/js/audio-player.js"></script>
+  <script src="/static/assets/js/audioplayer.js"></script>  
+  <script src="/static/assets/js/main.js"></script>  
+  
+
+
+</body>
+
+</html>

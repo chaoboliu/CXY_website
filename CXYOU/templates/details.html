@@ -1,0 +1,304 @@
+﻿{% extends 'jicheng.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% block dibu %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+	
+	<title>details</title>
+    <meta name="keywords" content="HTML5,CSS3,HTML,Template,Themeton" >
+    <meta name="description" content="Cloudy Town - Simple Blog HTML Template">
+    <meta name="author" content="Themeton">
+    <!-- Favicon -->
+{#    <link rel="shortcut icon" href="/static/images/title.ico"/>#}
+    <!-- Fonts -->
+    <link href="/static/det/fonts.css" rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="/static/det/vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/det/vendors/bootstrap/css/bootstrap-theme.min.css">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" type="text/css" href="/static/det/vendors/font-awesome/css/font-awesome.min.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" type="text/css" href="/static/det/vendors/swiper/css/swiper.min.css">
+    <!-- Magnific-popup -->
+  
+    <link rel="stylesheet" type="text/css" href="/static/det/style.css">
+	<link rel="stylesheet" type="text/css" href="/static/det/css/welcome.css">
+
+
+
+
+</head>
+<body>
+
+	<div class="wrapper">
+		<header id="header"></header>
+    </div>
+
+<section class="section-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8 col-md-8">
+						<article class="content-item">
+							<div class="entry-media">
+								<div class="post-title">
+									<h2><a href="javascript:;">{{ blog.c_title }}</a></h2>
+									<div class="entry-date">
+										<ul>
+											<li>
+												<a href='#'>作者:{{ blog.c_author }}</a>
+											</li>
+											<li>日期:{{ blog.c_date }} </li>
+											<li>浏览:{{ blog.c_views }} </li>
+										</ul>
+									</div>
+								</div>
+								<div class="bubble-line"></div>
+								<div class="post-content">
+									<img src="/static/img/{{ blog.c_iamge }}" alt="not image">
+
+									<p>
+                                        {{ blog.c_content|safe }}
+
+									</p>
+								</div>
+								<div class="bubble-line"></div>
+								<div class="post-footer">
+									<div class="row">
+										<div class="col-sm-5 s-tags">
+											<a href="javascript:;">{{ blog.c_name }}</a>
+										</div>
+										<div class="col-sm-7 text-right">
+											<div class="content-social">
+												<a href="javascript:;"><i
+														class="fa fa-facebook"></i><span>Facebook</span></a>
+												<a href="javascript:;"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+												<a href="javascript:;"><i
+														class="fa fa-pinterest"></i><span>Pinterest</span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						
+						<article class="content-item">
+							<div class="entry-media">
+								<div class="post-title comment-title">
+									<h3>评论区:</h3>
+								</div>
+								<div class="bubble-line"></div>
+								<div id="comments" class="comments-area">
+									<div class="comments-wrapper">
+										<ol class="comment-list">
+											<li id="comment-5">
+                                                {% for c_del_list in c_del %}
+                                                    <article>
+                                                        <div class="comment-avatar">
+                                                            <img src="/static/img/{{ c_del_list.iamge }}" alt="no image">
+                                                        </div>
+                                                        <div class="comment-body">
+                                                            <div class="meta-data">
+                                                                <span class="comment-author">{{ c_del_list.user }}</span>
+                                                                <span class="comment-date">{{ c_del_list.pub_date }}</span>
+                                                            </div>
+                                                            <div class="comment-content">
+                                                                <p>{{ c_del_list.content }}</p>
+                                                            </div>
+
+                                                        </div>
+                                                    </article>
+                                                {% endfor %}
+											</li><!-- #comment-## -->
+										</ol><!-- .comment-list -->
+
+
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="content-item">
+							<div class="entry-media">
+								<div class="post-title">
+									<h2>评论:</h2>
+								</div>
+								<div class="bubble-line"></div>
+								<div class="post-content comment">
+									<form action="{% url '/:yes4' %}" method="post" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        <div class="comment-form ">
+											<p class="input-name">请输入内容:</p>
+											<textarea placeholder="" name="content"></textarea>
+										</div>
+                                        <input name="post_id" value="{{ blog.id }}" type="hidden">
+                                        <input class="title2" type="text" name="title" placeholder="请输入匿名昵称" style="line-height: 30px;">
+                                          请上传头像照片:<input type="file" name="pic" placeholder="请上传头像照片"/>
+                                        <input name="submit" type="submit"  class="button" value="发表" />
+                                    </form>
+								</div>
+							</div>
+						</article>
+					</div>
+                    <div class="col-sm-4 sidebar">
+	<div class="widget">
+		<h3 class="widget-title">关于我:</h3>
+		<div class="bubble-line"></div>
+
+		<div class="widget-content">
+			<img src="/static/det/images/widget/about.jpg" alt="not image">
+			<p>Hello I’m Jenny Kurto author of Letter town blog. This is my personal space which is like to share
+				others. And i’m living New York city working and blogging.</p>
+			<div class="widget-more">
+				<a href="javascript:;" class="button">More story</a>
+			</div>
+		</div>
+	</div>
+	<div class="widget">
+		<h3 class="widget-title">热门试题:</h3>
+		<div class="bubble-line"></div>
+		<div class="widget-content">
+			<ul>
+				<li>
+					<a href="javascript:;">Video & music</a>
+				</li>
+				<li>
+					<a href="javascript:;">Fashion</a>
+				</li>
+				<li>
+					<a href="javascript:;">Travel & hiking</a>
+				</li>
+				<li>
+					<a href="javascript:;">Photography</a>
+				</li>
+				<li>
+					<a href="javascript:;">food recipe</a>
+				</li>
+				<li>
+					<a href="javascript:;">do it yourself</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="widget">
+		<h3 class="widget-title">我的热门:</h3>
+		<div class="bubble-line"></div>
+		<div class="widget-content">
+			<div class="widget-recent">
+				<img src="/static/det/images/widget/resent.jpg" alt="not image">
+				<h4><a href="javascript:;">Meet my workspace</a> </h4>
+				<p>
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+					industry.
+				</p>
+			</div>
+			<div class="widget-recent">
+				<img src="/static/det/images/widget/resent1.jpg" alt="not image">
+				<h4><a href="javascript:;">This is how to unique idea born</a> </h4>
+				<p>
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+					industry.
+				</p>
+			</div>
+			<div class="widget-recent last">
+				<img src="/static/det/images/content/photos4.jpg" alt="not image">
+				<h4><a href="javascript:;">Only you will choose your life.</a></h4>
+				<p>
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+					industry.
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="widget">
+		<h3 class="widget-title"> <a href="javascript:;">我的标签:</a></h3>
+		<div class="bubble-line"></div>
+		<div class="widget-content">
+			<div class="widget-tags">
+				<a href="javascript:;">clean</a>
+				<a href="javascript:;">minimal</a>
+				<a href="javascript:;">cloudy</a>
+				<a href="javascript:;">video</a>
+				<a href="javascript:;">template</a>
+				<a href="javascript:;">fashion</a>
+				<a href="javascript:;">bloggers</a>
+				<a href="javascript:;">carefully</a>
+				<a href="javascript:;">handcrafted</a>
+				<a href="javascript:;">print</a>
+				<a href="javascript:;">psd</a>
+				<a href="javascript:;">music</a>
+				<a href="javascript:;">food recipe</a>
+
+			</div>
+		</div>
+	</div>
+	<div class="widget-sub social">
+		<ul>
+			<li>
+				<a class="social-widget" href="javascript:;"> <i class="fa fa-facebook"> </i><span> share</span></a>
+				<div> 211</div>
+
+			</li>
+			<li>
+				<a class="social-widget" href="javascript:;"> <i class="fa fa-twitter"></i> <span>follow</span></a>
+				<div> 121</div>
+			</li>
+			<li>
+				<a class="social-widget" href="javascript:;"> <i class="fa fa-google-plus"></i> <span> share </span></a>
+				<div> 11</div>
+			</li>
+			<li>
+				<a class="social-widget" href="javascript:;"> <i class="fa fa-instagram"></i> <span> follow  </span></a>
+				<div>65</div>
+			</li>
+
+		</ul>
+
+	</div>
+	
+</div>				</div>
+			</div>
+		</section>
+	</div>
+    <footer id="footer">
+        <div class="footer-slide">
+	<div class="swiper-container">
+		
+	</div>        
+    </footer>
+
+    <script type="text/template" id="tpl-bubble-left">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 30" enable-background="new 0 0 15 30" xml:space="preserve">
+            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" d="M0,29.4c0,0,7.5,0,7.5-7c0,0,7,0,7-7c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-7-7-7-7-7c0-7-7.5-7-7.5-7"/>
+        </svg>
+    </script>
+
+    <script type="text/template" id="tpl-bubble-right">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 30" enable-background="new 0 0 15 30" xml:space="preserve">
+            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" d="M15,29.4c0,0-7.5,0-7.5-7c0,0-7,0-7-7c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-7,7-7,7-7c0-7,7.5-7,7.5-7"/>
+        </svg>
+	</script>
+	
+
+
+    <!-- Include jQuery and Scripts -->
+    <script type="text/javascript" src="/static/det/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/det/vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/det/vendors/jquery.waypoints.min.js"></script>
+    <script type="text/javascript" src="/static/det/vendors/isotope.pkgd.min.js"></script>
+    <!-- Swiper -->
+    <script type="text/javascript" src="/static/det/vendors/swiper/js/swiper.min.js"></script>
+    <!-- Magnific-popup -->
+	<script type="text/javascript" src="/static/det/js/scripts.js"></script>
+
+
+    {% endblock dibu %}
+</body>
+</html>

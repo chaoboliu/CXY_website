@@ -1,0 +1,150 @@
+/*==============
+	Color css
+================*/
+
+/*Primary Color*/ 
+.btn-alt:hover,
+.btn-alt:focus,
+.js-widget-post--content .js-post-date,
+#js-album-tab-slider2.owl-theme .owl-nav div i:hover,
+#js-album-tab-slider.owl-theme .owl-nav div i:hover,
+.consert-album-sharee .social-icon li a:hover,
+.js-default-single-blog-content a:focus,
+.js-default-single-blog-content a:hover,
+.slider-style-three .owl-nav div:hover,
+.album-content a:hover,
+.album-content a:focus,
+.js-blog-post-content a:hover, 
+.js-singer-content a:hover, 
+.js-audio-playlist-item li .icon a:hover,
+.js-product-cart ul li div a:hover,
+.js-tag ul li a:hover,
+.ja-customar-review li i,
+.js-single-singer:hover .js-singer-content h4,
+span.primary-color,
+.primary-color {
+	color: #ff0068 !important;
+}
+
+
+.js-blog-read-more::after,
+.js-category::after,
+.js-latest-album-thumbnail p::after,
+.js-latest-album-icon a,
+.audioplayer:not(.audioplayer-playing) .audioplayer-playpause:hover,
+.audioplayer:not(.audioplayer-playing) .audioplayer-playpause,
+.js-product-content h6:after,
+.js-album-style3 .album-content h6::after,
+.dot-shape,
+.dot-shape::after,
+.dot-shape::before,
+.js-social-icon-titlee p:after,
+.js-footer-widget h5:after,
+.footer-widget h5:after,
+.js-single-blog:hover .js-blog-post-date p::after,
+.js-single-singer:hover .js-singer-content::after,
+.js-social-icon-title p:after,
+.social-icon li.active a,
+.social-icon li a:hover,
+.cart:after,
+.header-icon .music a,
+.primary-bg{
+	background-color: rgba(0,0,0,0.5)!important;
+}
+
+
+.js-shopping-update-cart .btn-alt{
+	border-color: #ff0068;
+}
+
+/*Secondary Color*/ 
+.header-icon.logo-display li a,
+#js-hot-tracks-slider-item .js-single-tracks:hover .js-tracks-content h6 a,
+.js-top-tracks .js-single-tracks li:hover .js-tracks-content h6 a,
+.js-tracks-content h6 a:hover,
+.js-tracks-content a:hover,
+.footer-style2 .secondary-color,
+.secondary-color {
+	color: #7e43d2 !important;
+}
+
+.vegas-timer-progress,
+.js-single-playlists:hover .js-playlists-content::after,
+.section-title-style2 p::after, 
+.footer-style2 .social-icon li a:hover,
+.header-nav-style2 .header-icon .music a,
+.header-nav-style2 .cart:after,
+.secondary-bg{
+	background-color: #7e43d2;
+} 
+
+/*Light Color*/
+.light-color {
+	color: #fb6464 !important;
+}
+
+#ja-all-product-slider2.owl-theme .owl-dots .owl-dot span,
+#js-singer-slider-style2.owl-theme .owl-dots .owl-dot span,
+.js-contact-info h5:after,
+.about-title h3:after,
+.ja-slide-artist-name h2:after,
+.light-bg{
+	background-color: #fb6464;
+}
+.ja-slide-thumbnail img{
+	border-color: #fb6464;
+}
+/*---------------------
+	Gradient Color
+----------------------*/
+
+/*Primary Gradient Color*/
+.audioplayer-bar-played,
+.js-primary-border-bottom-gradient::after,
+.pagination-ist li a:hover,
+.nav-pills .nav-link:hover,
+.nav-pills .nav-link.active, 
+.nav-pills .show > .nav-link,
+.js-single-tracks-thumbnail a:after,
+.btn-primary,
+.primary-gradient-color {
+	background: -webkit-linear-gradient(left, #321575 0%, #ff0066 100%);
+	background: -o-linear-gradient(left, #321575 0%, #ff0066 100%);
+	background: linear-gradient(to right, #321575 0%, #ff0066 100%);
+}
+/*Secondary Gradient Color*/
+
+#js-singer-slider.owl-theme .owl-dots .owl-dot.active span,
+#js-artist-video-slider.owl-theme .owl-dots .owl-dot.active span,
+#js-hot-tracks-slider.owl-theme .owl-dots .owl-dot.active span,
+#js-playlists-slider.owl-theme .owl-dots .owl-dot span,
+#js-single-album-slider.owl-theme .owl-dots .owl-dot span,
+.js-blog-style2 .js-blog-admin-reade-more,
+.js-artist-video .js-video-thumbnail:after,
+.js-single-tracks li:hover .js-single-tracks-thumbnail li a:after,
+.js-playlists-content::after,
+.js-playlists-thumbnail a:after,
+.album-thumbnail:after,
+.btn-secondary,
+.secondary-gradient-color {
+	background: -webkit-linear-gradient(left, #5105fd 0%, #aa31e5 100%);
+	background: -o-linear-gradient(left, #5105fd 0%, #aa31e5 100%);
+	background: linear-gradient(to right, #5105fd 0%, #aa31e5 100%);
+}
+
+
+/*Light Gradient Color*/
+
+#ja-all-product-slider2.owl-theme .owl-dots .owl-dot.active span,
+#js-artist-video-slide-style2.owl-theme .owl-dots .owl-dot.active span,
+#js-singer-slider-style2.owl-theme .owl-dots .owl-dot.active span,
+.js-blog-style5 .js-blog-admin-reade-more,
+.btn-light,
+.js-product-price,
+.light-gradient-color {
+	background: -webkit-linear-gradient(left, #ff5294 0%, #f76e64 100%);
+	background: -o-linear-gradient(left, #ff5294 0%, #f76e64 100%);
+	background: linear-gradient(to right, #ff5294 0%, #f76e64 100%);
+}
+
+ 

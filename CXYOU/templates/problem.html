@@ -1,0 +1,413 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+    <title>提问?</title>
+    <link rel="shortcut icon" href="/static/images/121.png"/>
+
+    <link rel="stylesheet" type="text/css" href="/static/js/dist/bootstrap.min.css">
+    <link href="/static/js/dist/summernote.css" rel="stylesheet"/>
+
+    <script src="/static/js/js/jquery.min.js"></script>
+    <script src="/static/js/js/bootstrap.min.js"></script>
+    <script src="/static/js/dist/summernote.js"></script>
+    <script src="/static/js/dist/lang/summernote-zh-CN.js"></script>
+
+{#    <script src="http://p9l6ece3c.bkt.clouddn.com/ckeditor.js"></script>#}
+
+    <!-- 中文-->
+    <script src="/static/js/upload.js"></script>
+    <meta name="keywords" content="个人博客网站,lmlblog,Grace主题,wordpress主题">
+    <link rel='stylesheet' href='/static/css/owl.carousel.min.css' type='text/css' media='all'/>
+    <link rel='stylesheet' href='/static/css/fontello.css' type='text/css' media='all'/>
+    <link rel='stylesheet' href='/static/css/nicetheme.css' type='text/css' media='all'/>
+    <link rel='stylesheet' href='/static/css/reset.css' type='text/css' media='all'/>
+    <link rel='stylesheet' href='/static/css/style.css' type='text/css' media='all'/>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:regular,700,600&amp;latin"
+          type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+    <link href="/static/css/style1.css" rel="stylesheet">
+    <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/ionicons.min.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" charset="utf-8" src="/static/utf8-php/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/static/utf8-php/ueditor.all.min.js"> </script>
+    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+    <script type="text/javascript" charset="utf-8" src="/static/utf8-php/lang/zh-cn/zh-cn.js"></script>
+
+
+    <style>
+        .m {
+            width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 90px;
+        }
+
+        #header, #header .toggle-tougao, .two-s-footer .footer-box {
+            background-color: #000;
+        }
+
+        #header .primary-menu ul > li > a, #menu-mobile a, #header .js-toggle-message button, #header .js-toggle-search, #header .toggle-login, #header .toggle-tougao {
+            color: #bdbdbd;
+        }
+
+        .navbar-toggle .icon-bar {
+            background-color: #bdbdbd;
+        }
+
+        #header .primary-menu ul > li.current-menu-item > a, #header .primary-menu ul > li.menu-item-has-children:hover > a, #header .primary-menu ul > li.current-menu-ancestor > a, #header .primary-menu ul > li > a:hover {
+            color: #FFF;
+        }
+
+        #header .toggle-tougao:hover, #header .primary-menu ul > li .sub-menu li a:hover, #header .primary-menu ul > li .sub-menu li.menu-item-has-children:hover > a, #header .primary-menu ul > li .sub-menu li.current-menu-item > a {
+            color: #000;
+        }
+
+        #header .toggle-tougao, #header .toggle-tougao:hover {
+            border-color: #bdbdbd;
+        }
+
+        #header .toggle-tougao:hover {
+            background-color: #FFF;
+        }
+
+        .tijiao2 {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .title2 {
+            width: 800px;
+            height: 62px;
+            margin-top: -10px;
+            /* line-height: 90px; */
+            font-size: 50px;
+            background-color: blue;
+            outline: none
+        }
+    </style>
+
+    <script>
+        $(function () {
+            $('.summernote').summernote({
+                height: 400,
+                tabsize: 2,
+                lang: 'zh-CN'
+            });
+        });
+
+    </script>
+
+
+</head>
+
+<body class="home blog off-canvas-nav-left">
+<style>
+    .ck-editor__editable {
+        min-height: 600px;
+        min-width: 800px;
+    }
+</style>
+
+<!-- <div class="loader-mask">
+    <div class="loader">
+        <div></div>
+        <div></div>
+    </div>
+</div> -->
+<div id="header" class="navbar-fixed-top">
+    <div class="container">
+        <div class="logo">
+            <img src="/static/images/20181127.png" width="220px" height="66px;">
+{#            <a href="#" title="程序优" style="background-image: url(/static/images/20181127.png);"> </a>#}
+        </div>
+        <div role="navigation" class="site-nav  primary-menu">
+            <ul id="menu-navigation">
+                <li class="current-menu-ancestor"><a href="{% url '/:index' %}">首页</a></li>
+                <li><a href="#">热点资讯</a></li>
+                <li><a href="{% url '/:forum' %}">技术交流</a></li>
+                <li><a href="{% url '/:list' %}">热门文章</a></li>
+                <li><a href="#">工作应聘</a></li>
+            </ul>
+        </div>
+
+
+        <!--右侧导航-->
+        <div class="right-nav pull-right">
+            <button class="js-toggle-search"><i class=" icon-search"></i></button>
+{#            <a href="{% url '/:write' %}" target="_blank" class="toggle-tougao  hidden-xs">投稿</a> #}
+            <a
+                href="{% url '/:dlu' %}" class="toggle-login hidden-xs" target="_blank">登录</a> <span
+                class="line  hidden-xs"></span> <a href="{% url '/:c_login' %}" class="toggle-login hidden-xs"
+                                                   target="_blank">注册</a>
+        </div>
+    </div>
+</div>
+
+
+<form method="post" action="{% url '/:yes2' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="m">
+        <h3>可将图片拖拽到下框中</h3>
+{#        <div id="drop_area" name="image"><input type="submit" value="上传"></div>#}
+        <input type="file" name="pic"/><br>
+{#        <input type="submit" value="上传">#}
+
+
+
+
+        <input class="title2" type="text" name="title" placeholder="请输入匿名">
+
+
+{#        <input class="summernote" name="content" placeholder="请输入...">#}
+
+
+{#        <div id="editor>#}
+{#            <div class="formControls col-xs-6 col-sm-6"></div>#}
+{#                <textarea name="content" id="editor" ></textarea>#}
+{#        </div>#}
+        <textarea id="editor" type="text/plain" name="content" style="width:800px;height:500px;"></textarea>
+
+
+
+{#        <div name="content" id="editor">#}
+{#                <p></p>#}
+{#        </div>#}
+
+    </div>
+    <input class="tijiao2" type="submit" value="提交">
+</form>
+
+<div id="footer" class="two-s-footer clearfix">
+    <div class="footer-box">
+        <div class="container">
+            <div class="social-footer"><a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);"><i
+                    class="icon-wechat"></i></a></div>
+            <div class="nav-footer"><a href="{% url '/:index' %}">首页</a> <a href="#">热点资讯</a> <a href="{% url '/:forum' %}">技术交流</a> <a
+                    href="{% url '/:list' %}">热门文章</a> <a>工作应聘</a> <a href="{% url '/:dlu' %}">登录</a><a href="{% url '/:c_login' %}">注册</a><a href="{% url '/:write' %}" >投稿</a><a href="{% url '/:problem' %}" >提问?</a></div>
+            <div class="copyright-footer">
+                <p>Copyright © 2018 <a class="site-link" href="#" title="lmlblog" rel="home">lmlblog</a> · Powered By
+                    WordPress · Grace Theme By <a href="http://www.lmlblog.com" target="_blank">maolai</a></p>
+            </div>
+            <div class="links-footer"><span>友情链接：</span>
+                <a href="#"  target="_blank">微信小程序-搞笑笑拍</a>
+                <a href="http://www.jikedaohang.com/" target="_blank">极客导航</a>
+                <a href="#" target="_blank">百度小程序-程序优(待开发)</a>
+            </div>
+    </div>
+</div>
+
+<div class="search-form">
+    <form method="get" action="http://www.lmlblog.com" role="search">
+        <div class="search-form-inner">
+            <div class="search-form-box">
+                <input class="form-search" type="text" name="s" placeholder="键入搜索关键词">
+                <button type="submit" id="btn-search"><i class="icon-search"></i></button>
+            </div>
+            <div class="search-commend">
+                <h4>大家都在搜</h4>
+                <ul>
+                    <li><a href="#">wordpress主题</a></li>
+                    <li><a href="#">个人博客模板</a></li>
+                    <li><a href="#">网页模板</a></li>
+                </ul>
+            </div>
+        </div>
+    </form>
+    <script type="text/javascript">
+        var dragImgUpload = new DragImgUpload("#drop_area",{
+            callback:function (files) {
+                //回调函数，可以传递给后台等等
+                var file = files[0];
+                console.log(file.name);
+            }
+        })
+    </script>
+{#    <script>#}
+{#        ClassicEditor.create( ckeditor2,{#}
+{#            ckfinder: {#}
+{#                uploadUrl : '/admin/Upload/uploadImages?command=QuickUpload&type=Files&responseType=json'#}
+{#                //后端处理上传逻辑返回json数据,包括uploaded(选项true/false)和url两个字段#}
+{#            }#}
+{#        }).then(#}
+{#        ).catch()#}
+{#    </script>#}
+
+{#    <script src="/static/ckeditor5-build-classic/ckeditor.js"></script>#}
+{#        <script>#}
+{#            //初始化编辑器#}
+{#            ClassicEditor#}
+{#                .create( document.querySelector( '#editor' ) )#}
+{#                .then( editor => {#}
+{#                        //加载图片适配器#}
+{#                        editor.plugins.get('FileRepository').createUploadAdapter = (loader)=>{#}
+{#                            return new UploadImageAdapter(loader);#}
+{#                        };#}
+{#                })#}
+{#                .catch( error => {#}
+{#                    console.error( error );#}
+{#                } );#}
+{##}
+{##}
+{#            //图片上传适配器。#}
+{#            class UploadImageAdapter{#}
+{#                constructor(loader) {#}
+{#                    this.loader = loader;#}
+{#                }#}
+{#                upload() {#}
+{#                    return new Promise((resolve, reject) => {#}
+{#                        const data = new FormData();#}
+{#                        data.append('upload', this.loader.file);#}
+{#                        data.append('allowSize', 100);//允许图片上传的大小/兆#}
+{#                        $.ajax({#}
+{#                            url: 'loadImage',#}
+{#                            type: 'POST',#}
+{#                            data: data,#}
+{#                            dataType: 'json',#}
+{#                            processData: false,#}
+{#                            contentType: false,#}
+{#                            success: function (data) {#}
+{#                                if (data.res) {#}
+{#                                    resolve({#}
+{#                                        default: data.url#}
+{#                                    });#}
+{#                                } else {#}
+{#                                    reject(data.msg);#}
+{#                                }#}
+{##}
+{#                            }#}
+{#                        });#}
+{##}
+{#                    });#}
+{#                }#}
+{#                abort() {#}
+{#                }#}
+{#            }#}
+{##}
+{##}
+{##}
+{##}
+{#        </script>#}
+    <script type="text/javascript">
+
+    //实例化编辑器
+    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+    var ue = UE.getEditor('editor');
+
+
+    function isFocus(e){
+        alert(UE.getEditor('editor').isFocus());
+        UE.dom.domUtils.preventDefault(e)
+    }
+    function setblur(e){
+        UE.getEditor('editor').blur();
+        UE.dom.domUtils.preventDefault(e)
+    }
+    function insertHtml() {
+        var value = prompt('插入html代码', '');
+        UE.getEditor('editor').execCommand('insertHtml', value)
+    }
+    function createEditor() {
+        enableBtn();
+        UE.getEditor('editor');
+    }
+    function getAllHtml() {
+        alert(UE.getEditor('editor').getAllHtml())
+    }
+    function getContent() {
+        var arr = [];
+        arr.push("使用editor.getContent()方法可以获得编辑器的内容");
+        arr.push("内容为：");
+        arr.push(UE.getEditor('editor').getContent());
+        alert(arr.join("\n"));
+    }
+    function getPlainTxt() {
+        var arr = [];
+        arr.push("使用editor.getPlainTxt()方法可以获得编辑器的带格式的纯文本内容");
+        arr.push("内容为：");
+        arr.push(UE.getEditor('editor').getPlainTxt());
+        alert(arr.join('\n'))
+    }
+    function setContent(isAppendTo) {
+        var arr = [];
+        arr.push("使用editor.setContent('欢迎使用ueditor')方法可以设置编辑器的内容");
+        UE.getEditor('editor').setContent('欢迎使用ueditor', isAppendTo);
+        alert(arr.join("\n"));
+    }
+    function setDisabled() {
+        UE.getEditor('editor').setDisabled('fullscreen');
+        disableBtn("enable");
+    }
+
+    function setEnabled() {
+        UE.getEditor('editor').setEnabled();
+        enableBtn();
+    }
+
+    function getText() {
+        //当你点击按钮时编辑区域已经失去了焦点，如果直接用getText将不会得到内容，所以要在选回来，然后取得内容
+        var range = UE.getEditor('editor').selection.getRange();
+        range.select();
+        var txt = UE.getEditor('editor').selection.getText();
+        alert(txt)
+    }
+
+    function getContentTxt() {
+        var arr = [];
+        arr.push("使用editor.getContentTxt()方法可以获得编辑器的纯文本内容");
+        arr.push("编辑器的纯文本内容为：");
+        arr.push(UE.getEditor('editor').getContentTxt());
+        alert(arr.join("\n"));
+    }
+    function hasContent() {
+        var arr = [];
+        arr.push("使用editor.hasContents()方法判断编辑器里是否有内容");
+        arr.push("判断结果为：");
+        arr.push(UE.getEditor('editor').hasContents());
+        alert(arr.join("\n"));
+    }
+    function setFocus() {
+        UE.getEditor('editor').focus();
+    }
+    function deleteEditor() {
+        disableBtn();
+        UE.getEditor('editor').destroy();
+    }
+    function disableBtn(str) {
+        var div = document.getElementById('btns');
+        var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+        for (var i = 0, btn; btn = btns[i++];) {
+            if (btn.id == str) {
+                UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+            } else {
+                btn.setAttribute("disabled", "true");
+            }
+        }
+    }
+    function enableBtn() {
+        var div = document.getElementById('btns');
+        var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+        for (var i = 0, btn; btn = btns[i++];) {
+            UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+        }
+    }
+
+    function getLocalData () {
+        alert(UE.getEditor('editor').execCommand( "getlocaldata" ));
+    }
+
+    function clearLocalData () {
+        UE.getEditor('editor').execCommand( "clearlocaldata" );
+        alert("已清空草稿箱")
+    }
+
+</script>
+
+
+</body>
+</html>

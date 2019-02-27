@@ -1,0 +1,303 @@
+/*
+Template: Devaid - Music MultiPage Bootstrap 4 Html Template
+Author: Theme-rocket
+更多精品Bootstrap模板请访问：http://www.bootstrapmb.com
+Version:  1.0
+Description: Devaid Music Template is only for your Music Industry.
+
+*/
+/*-------------------------------------------------------
+1. Theme default css
+---------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,600|Poppins:100,300,400,600');
+body {
+    scroll-behavior: smooth;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 26px;
+    color: #272c33;    
+    letter-spacing: 1px;
+}
+/*font-family: 'Poppins', sans-serif;*/
+img {
+    max-width: 100%;
+}
+.nav li a,
+.header-nav,
+.js-popup-album-cover,
+.js-gallary-thumbnail img,
+.slider-style-three .owl-nav div,
+.header-icon,
+.logo,
+.slider-area .owl-nav div i,
+.slider-area .owl-nav div,
+.header-nav-area,
+.js-song-list,
+#js-play-song,
+.audioplayer,
+.header-nav-style2,
+.header-nav-style3,
+.slider-area .owl-nav button,
+.js-offcanvas-menu,
+.js-post-catogories li a span,
+.js-default-blog-thumbnail img,
+.js-default-blog-thumbnail::after,
+.pagination-ist li a,
+.js-album-style4 .js-video-play a,
+.js-add-to-cart,sss
+.js-artist-video .js-video-thumbnail:after,
+.js-single-tracks-thumbnail a:after,
+.js-playlists-content::after,
+.js-playlists-thumbnail a:after,
+.album-thumbnail:after,
+.js-igfeed-btn,
+.js-feed-thumbnail:after,
+.js-blog-post-date p,
+.js-blog-post-date p::after,
+.js-blog-thumbnail img,
+.js-singer-thumbnail .social-icon,
+.js-singer-thumbnail:after,
+.social-icon li a,
+.popup-album-cover,
+.app-button,
+.album-cd,
+.header-nav .menu > li a,
+a.btn,
+.btn,
+a,
+h4,
+h3,
+h2,
+h5,
+.button {
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+a:focus,
+a:hover,
+.button:focus {
+    text-decoration: none;
+    outline: none;
+} 
+:focus {
+    outline: none;
+} 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: normal;  
+    margin-top: 0;
+    margin-bottom: 0;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: .1em;
+    line-height: 1.5em;
+    text-transform: capitalize;
+}
+h1 { font-size: 40px; }
+h2 { font-size: 35px; }
+h3 { font-size: 28px; }
+h4 { font-size: 20px; }
+h5 { font-size: 18px; }
+h6 { font-size: 16px; } 
+.has-color p,
+.has-color h1,
+.has-color h2,
+.has-color h3,
+.has-color h4,
+.has-color h5,
+.has-color h6 {
+    color: #ffffff !important;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: inherit;
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+li {
+    list-style: none
+}
+.list-inline{
+    display: inline-flex;
+    list-style: none; 
+}
+.list-inline li{
+    display: inline-block;
+}
+p {
+    color: #737373;
+    font-size: 16px; 
+    line-height: 26px;
+    margin-bottom: 20px;
+}
+.lead{
+    font-size: 18px;
+    line-height: 28px;
+}
+textarea,
+input[type="email"],
+input[type="password"],
+input[type="submit"],
+input[type="text"]{
+    padding-left: 20px;
+    padding-top: 22px; 
+    line-height: 50px;
+    margin-bottom: 35px;
+    width: 100%;
+}
+textarea{
+    resize: none;
+}
+*::-moz-selection {
+    background: #ff0068;
+    color: #fff;
+    text-shadow: none;
+}
+::-moz-selection {
+    background: #ff0068;
+    color: #fff;
+    text-shadow: none;
+}
+::selection {
+    background: #ff0068;
+    color: #fff;
+    text-shadow: none;
+}
+.btn-primary,
+.btn-secondary,
+.btn-light:focus,
+.btn-light:hover,
+.btn-light{
+    color: #ffffff !important;
+}
+.bg-light{
+    background-color: #ecf5f6;
+}
+.bg-dark{
+    background-color: #060a10 !important;
+} 
+.bg-white{
+    background-color: #fff;
+}
+.btn {
+    border: 0 none;
+    border-radius: 50px;
+    font-size: 16px;
+    padding: 12px 36px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+.no-border-radius{
+   border-radius: 3px;  
+}
+.btn-sm {
+    font-size: 14px;
+    padding: 8px 32px;
+    text-transform: capitalize;
+}
+.btn:hover,
+.btn:focus{
+    border: 0 none;
+    box-shadow: none;
+    color: #ffffff;
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.5);
+
+}
+.btn-alt:hover,
+.btn-alt:focus{ 
+    box-shadow: 0 2px 15px -5px #ff0068;
+}
+.btn-alt {
+    background-color:#ffffff;
+    color: #203a48;
+}
+/*Section Marrgin Padding*/
+section{
+    padding: 100px 0;
+}
+.pt-100{
+    padding-top: 100px;
+}
+.pb-100{
+    padding-bottom: 100px;
+}
+.pb-50{
+    padding-bottom: 50px;
+}
+.pt-150{
+    padding-top: 150px;
+}
+.pb-150{
+    padding-bottom: 150px;
+}
+.mb-50 {
+    margin-bottom: 60px;
+}
+.mb-60 {
+    margin-bottom: 60px;
+}
+.mb-80 {
+    margin-bottom: 80px;
+}
+.mb-90 {
+    margin-bottom: 90px;
+}
+.mb-100 {
+    margin-bottom: 100px;
+}
+.mt-50 {
+    margin-top: 60px;
+}
+.mt-60 {
+    margin-top: 60px;
+}
+.mt-80 {
+    margin-top: 80px;
+}
+.mt-90 {
+    margin-top: 90px;
+}
+.mt-100 {
+    margin-top: 100px;
+}
+.shape-white{
+    background-color: #ffffff;
+}
+.shape-gray{
+    background-color: #e9e7ea;
+}
+.shape3,
+.shape3-gray,
+.shape-gray,
+.shape-white,
+.shape { 
+    height: 2px;
+    margin: 0 auto 50px;
+    position: relative; 
+    width: 50px;
+} 
+.shape3-gray{
+    width: 100px;
+    background-color: #e9e7ea;
+}
+/*-------------------------------------------------------
+  1.1 Background color variation for section
+---------------------------------------------------------*/
