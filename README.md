@@ -66,4 +66,27 @@
       
       音乐地带页歌词同步功能,在线日历,天气功能
       
+- 本项目用到的技术和框架
+    
+      项目框架: Django
+      
+      数据库: Mysql
+      
+      文本编辑器: UEditor
+      
+      音乐播放器: Jplayer
+      
+ - 环境
+ 
+      开发工具: Pycharm
+      
+      开发语言: Python
+      
+      数据库: PyMySQL
+      
+      图片处理: Pillow
+      
+      文本编辑器: django-ckeditor
+      
+      
       
