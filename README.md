@@ -102,7 +102,7 @@
       加入数据可以在Django-admin管理账号手动添加数据或者输入Sql语句
       template数据处理有些数据要返回给JS所以要在View进行Python的转Json会用到Restful Api
       
--
+
       
       
       
